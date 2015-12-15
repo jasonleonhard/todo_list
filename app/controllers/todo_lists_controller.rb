@@ -43,7 +43,8 @@ class TodoListsController < ApplicationController
     respond_to do |format|
       if @todo_list.update(todo_list_params)
         format.html { redirect_to @todo_list, notice: 'Todo list was successfully updated.' }
-        format.json { render :show, status: :ok, location: @todo_list }
+        # format.json { render :show, status: :ok, location: @todo_list }
+        format.json { head :no_content }
       else
         format.html { render :edit }
         format.json { render json: @todo_list.errors, status: :unprocessable_entity }

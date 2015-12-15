@@ -8,16 +8,18 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
-gem 'sdoc', '~> 0.4.0', group: :doc
+# gem 'sdoc', '~> 0.4.0', group: :doc
+group :doc do
+  # bundle exec rake doc:rails generates the API under doc/api.
+  gem 'sdoc', require: false
+end
 
 group :development, :test do
   gem 'rspec-rails', '~> 2.0'
-  gem 'byebug'
 end
 
 group :development do
   gem 'web-console', '~> 2.0'
-  gem 'spring'
 end
 
 group :test do
