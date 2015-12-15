@@ -12,11 +12,14 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do
   gem 'rspec-rails', '~> 2.0'
-  gem 'capybara'
   gem 'byebug'
 end
 
 group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
+end
+
+group :test do
+  gem 'capybara', '~> 2.1.0'
 end
