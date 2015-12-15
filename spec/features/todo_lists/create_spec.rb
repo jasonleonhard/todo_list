@@ -4,7 +4,6 @@ describe "Creating todo lists" do
   def create_todo_list(options={})
     options[:title] ||= "Example title"
     options[:description] ||= "Example description"
-    
     visit "/todo_lists"
     click_link "New Todo list"
     expect(page).to have_content("New Todo List")
@@ -53,5 +52,4 @@ describe "Creating todo lists" do
     visit "/todo_lists"
     expect(page).to_not have_content("bla bla bla")
   end
-
 end
